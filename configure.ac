@@ -1,0 +1,1 @@
+./build.ac --without-gui
