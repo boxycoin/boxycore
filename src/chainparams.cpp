@@ -122,7 +122,7 @@ public:
         pchMessageStart[1] = 0xae;
         pchMessageStart[2] = 0xdc;
         pchMessageStart[3] = 0xfe;
-        nDefaultPort = 26573;
+        nDefaultPort = 21343;
         nPruneAfterHeight = 1000;
 
         genesis = CreateGenesisBlock(1630810977, 1795, 0x1f1fffff, 1, 50 * COIN);
@@ -156,7 +156,7 @@ public:
 
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
-        fMineBlocksOnDemand = true;
+        fMineBlocksOnDemand = false;
 
         checkpointData = {
         };

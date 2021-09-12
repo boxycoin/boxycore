@@ -24,7 +24,7 @@ Specifications
 | Algo                   | YespowerBOXY           |
 | Premine                | 0                      |
 | Block Spacing          | 60 seconds             |
-| Max Supply             | 21,000,000 (21 Million)|
+| Max Supply             | 23,000,000 (23 Million)|
 | Block Reward           | 10 - 1  BOXY           |
 
 License
