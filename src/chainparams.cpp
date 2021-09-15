@@ -129,20 +129,7 @@ public:
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("00050c831b07f1137c0fb85f2d1a9daedcf4dbbf91df32b1feee143a891a722f"));
         assert(genesis.hashMerkleRoot == uint256S("5b20cf91f544446cd62431381b0e17a0a90d081c2ecebb1043fc7a2fde41c953"));
-        
-        vSeeds.emplace_back("45.63.58.234:1604","45.63.58.234:1604");
-        vSeeds.emplace_back("99.16.215.42:1604","99.16.215.42:1604");
-        vSeeds.emplace_back("78.137.5.155:1604","78.137.5.155:1604");
-        vSeeds.emplace_back("45.63.58.234:1604","45.63.58.234:1604");
-        vSeeds.emplace_back("78.137.5.155:1604","78.137.5.155:1604");
-        vSeeds.emplace_back("217.182.76.35:59758","217.182.76.35:59758");
-        vSeeds.emplace_back("99.162.215.42:1604","99.162.215.42:1604");
-        vSeeds.emplace_back("57.177.134.207:61558","57.177.134.207:61558");
-        vSeeds.emplace_back("89.175.21.60:37430","89.175.21.60:37430");
-        vSeeds.emplace_back("217.100.85.170:44640","217.100.85.170:44640");
-        vSeeds.emplace_back("89.175.21.50:34956","89.175.21.50:34956");
-        vSeeds.emplace_back("198.13.36.250:1604","198.13.36.250:1604");
-        vSeeds.emplace_back("207.148.121.179:1604","207.148.121.179:1604");
+               
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,25); // B
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,48); // L
@@ -153,13 +140,22 @@ public:
         bech32_hrp = "bxy";
         
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
+        vSeeds.clear();
+        
 
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
-        fMineBlocksOnDemand = false;
+        fMineBlocksOnDemand = false;           
 
-        checkpointData = {
-        };
+checkpointData = (CCheckpointData) {
+            {
+                { 2,     uint256S("0x006563d4042a458f84fac3c39f192be1bc77349217ef5d6490b7461512e56658") },
+                { 10,    uint256S("0x0067568bfbbc6da61e0a81f8b55dc65cc72aa12d4c35b251a0b78254c4361e35") },
+                { 50,   uint256S("0x000015be1431aacee0a3f1a3a218f6fff857f068dab0e8f00e5cff7b1a399c05") }
+             }
+            };
+
+
 
         chainTxData = ChainTxData{
         };
